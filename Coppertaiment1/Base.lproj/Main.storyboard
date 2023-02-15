@@ -569,13 +569,30 @@
                                     </searchBar>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9iM-F0-Yo1">
+                                <rect key="frame" x="0.0" y="170" width="414" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="NFA-KE-nw3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-iL-hD9">
+                                <rect key="frame" x="50" y="438" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zLL-NQ-2SL"/>
                         <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9iM-F0-Yo1" firstAttribute="top" secondItem="Xwm-c7-tKS" secondAttribute="bottom" id="Kxw-On-ItW"/>
                             <constraint firstAttribute="trailing" secondItem="Xwm-c7-tKS" secondAttribute="trailing" id="TSX-oA-qOp"/>
                             <constraint firstItem="Xwm-c7-tKS" firstAttribute="top" secondItem="zLL-NQ-2SL" secondAttribute="top" id="TyN-zC-oSj"/>
                             <constraint firstItem="Xwm-c7-tKS" firstAttribute="leading" secondItem="zLL-NQ-2SL" secondAttribute="leading" id="VkZ-1x-6zj"/>
+                            <constraint firstItem="IDC-iL-hD9" firstAttribute="leading" secondItem="zLL-NQ-2SL" secondAttribute="leading" constant="50" id="Z5O-YB-Hss"/>
+                            <constraint firstItem="9iM-F0-Yo1" firstAttribute="leading" secondItem="zLL-NQ-2SL" secondAttribute="leading" id="ZOO-t1-7m2"/>
+                            <constraint firstItem="zLL-NQ-2SL" firstAttribute="trailing" secondItem="9iM-F0-Yo1" secondAttribute="trailing" id="c4x-z9-3Uh"/>
+                            <constraint firstItem="IDC-iL-hD9" firstAttribute="top" secondItem="9iM-F0-Yo1" secondAttribute="bottom" constant="51" id="fqY-ca-rlM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -586,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZS-KM-xjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="-34"/>
+            <point key="canvasLocation" x="656.52173913043487" y="-34.151785714285715"/>
         </scene>
         <!--View More View Controller-->
         <scene sceneID="cHc-Ke-DM6">
@@ -1016,9 +1033,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7MP-dq-mpk"/>
-        <segue reference="gQp-MI-Ous"/>
-        <segue reference="Vci-8L-3el"/>
+        <segue reference="H7Q-Ze-Pp7"/>
+        <segue reference="ddj-1N-mB1"/>
+        <segue reference="qzl-gf-eSW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="image 14" width="40" height="40"/>
