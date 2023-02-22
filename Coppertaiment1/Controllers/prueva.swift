@@ -7,53 +7,49 @@ class prueva: UIViewController {
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var pageView: UIPageControl!
     
-    var imgArr = [UIImage(named:"ad"),
-                  UIImage(named: "perfil"),
-                  UIImage(named: "image 14")]
+    var imgArr2 = [UIImage(named: "Nier"),
+                   UIImage(named: "ad-1"),
+                   UIImage(named: "link"),
+                   UIImage(named: "valk")]
+    
+    var timer = Timer()
+    var counter = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageView.numberOfPages = imgArr.count
+        pageView.numberOfPages = imgArr2.count
         pageView.currentPage = 0
+        sliderCollectionView.dataSource = self
+
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @objc func changeImage(){
+        counter += 1
+        if counter >= imgArr2.count{
+            counter = 0
+        }
+        print(counter)
+        let index = IndexPath.init(item: counter, section: 0)
+        self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+        pageView.currentPage = counter
     }
 }
 
 extension prueva: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imgArr.count
+        return imgArr2.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         if let vc = cell.viewWithTag(111) as? UIImageView{
-            vc.image = imgArr[indexPath.row]
-        } else if let ab = cell.viewWithTag(222) as? UIPageControl {
-            ab.currentPage = indexPath.row
+            vc.image = imgArr2[indexPath.row]
         }
         return cell
-    }
-}
-
-extension prueva: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectioViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectioViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) ->CGSize {
-        let size = sliderCollectionView.frame.size
-        return CGSize(width: size.width, height: size.height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectioViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectioViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
     }
 }
