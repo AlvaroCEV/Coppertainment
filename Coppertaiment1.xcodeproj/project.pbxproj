@@ -23,8 +23,7 @@
 		0D76A6D6299A5F81001BC6AC /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76A6D5299A5F81001BC6AC /* OrdersViewController.swift */; };
 		0D76A6D8299A6015001BC6AC /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76A6D7299A6015001BC6AC /* WishlistViewController.swift */; };
 		0D76A6DA299A605B001BC6AC /* AbilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76A6D9299A605B001BC6AC /* AbilitiesViewController.swift */; };
-		0D76A6DC299A6B27001BC6AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D76A6DB299A6B27001BC6AC /* HomeViewController.swift */; };
-		0DE1E2F229A60F5400925CA9 /* CarrouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1E2F129A60F5400925CA9 /* CarrouselViewController.swift */; };
+		0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,8 +45,7 @@
 		0D76A6D5299A5F81001BC6AC /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		0D76A6D7299A6015001BC6AC /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		0D76A6D9299A605B001BC6AC /* AbilitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesViewController.swift; sourceTree = "<group>"; };
-		0D76A6DB299A6B27001BC6AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0DE1E2F129A60F5400925CA9 /* CarrouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselViewController.swift; sourceTree = "<group>"; };
+		0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 				0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */,
 				0D61A9DF29966B1B00B3E356 /* SceneDelegate.swift */,
 				0D61A9E329966B1B00B3E356 /* Main.storyboard */,
-				0DE1E2F129A60F5400925CA9 /* CarrouselViewController.swift */,
 				0D61A9E629966B1D00B3E356 /* Assets.xcassets */,
 				0D61A9E829966B1D00B3E356 /* LaunchScreen.storyboard */,
 				0D61A9EB29966B1D00B3E356 /* Info.plist */,
@@ -115,7 +112,7 @@
 				0D76A6D5299A5F81001BC6AC /* OrdersViewController.swift */,
 				0D76A6D7299A6015001BC6AC /* WishlistViewController.swift */,
 				0D76A6D9299A605B001BC6AC /* AbilitiesViewController.swift */,
-				0D76A6DB299A6B27001BC6AC /* HomeViewController.swift */,
+				0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,8 +200,7 @@
 				0D76A6C6299A48D6001BC6AC /* LoginViewController.swift in Sources */,
 				0D76A6CE299A5D5E001BC6AC /* BasketViewController.swift in Sources */,
 				0D76A6DA299A605B001BC6AC /* AbilitiesViewController.swift in Sources */,
-				0D76A6DC299A6B27001BC6AC /* HomeViewController.swift in Sources */,
-				0DE1E2F229A60F5400925CA9 /* CarrouselViewController.swift in Sources */,
+				0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */,
 				0D76A6D6299A5F81001BC6AC /* OrdersViewController.swift in Sources */,
 				0D76A6D0299A5DD6001BC6AC /* PaymentViewController.swift in Sources */,
 				0D76A6CA299A56FA001BC6AC /* VideogameViewController.swift in Sources */,

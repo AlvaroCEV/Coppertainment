@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q7J-Yv-P8d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o6Y-3c-V0K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -92,8 +92,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Pk-t2-2El"/>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="login" id="RNZ-vZ-Qdq"/>
                         <segue destination="aHD-MN-pzI" kind="show" identifier="registerPage" id="tMQ-yy-bzD"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="DjJ-Gw-DvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4k-Tx-NSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,8 +180,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="4wR-Lf-niQ"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" modalPresentationStyle="fullScreen" id="3cW-OG-W5s"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="ZBD-6d-sgj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdC-c5-K9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -268,8 +268,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="fTI-G4-cgV"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" modalPresentationStyle="fullScreen" id="1cq-Eg-WRY"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="UI7-zj-sA6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Seu-7Y-NHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,7 +344,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LVj-S5-gMh"/>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="gQp-MI-Ous"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="eGV-Bh-cob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6L-3k-j7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -418,7 +418,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="f8g-wU-snl"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="oai-ko-MJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Opz-1K-XBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -492,7 +492,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="8l2-Ae-goT"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="8Qx-6T-pZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugR-d9-BF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -771,9 +771,9 @@
                     </view>
                     <size key="freeformSize" width="414" height="900"/>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="Gxm-aC-Jhv"/>
                         <segue destination="XCn-2h-uaI" kind="presentation" identifier="profile" animates="NO" modalPresentationStyle="fullScreen" id="nDF-6d-VZk"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="7Mg-uN-6Fq"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="QHl-Bd-k0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTY-cC-StQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -859,104 +859,13 @@
                             <constraint firstItem="EgM-vq-K2a" firstAttribute="top" secondItem="R6j-b3-YCS" secondAttribute="top" id="pKQ-la-WpV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="eKF-QV-ics"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNn-SZ-ZRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="658" y="651"/>
-        </scene>
-        <!--Home View Controller-->
-        <scene sceneID="CpH-6h-86Z">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="rQy-0Q-IKQ" customClass="HomeViewController" customModule="Coppertaiment1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qpM-6r-Wr9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a2e-FO-3GL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="101"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="07u-bf-85P">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-ax-W8n">
-                                                <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="95" id="9Z3-fl-POE"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="image 14"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci5-6Q-YL4">
-                                                <rect key="frame" x="149" y="0.0" width="116" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-JS-VsA">
-                                                <rect key="frame" x="319" y="0.0" width="95" height="50"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-OK-Hvu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping (1) 1" title=""/>
-                                                        <connections>
-                                                            <action selector="Basket:" destination="rQy-0Q-IKQ" eventType="touchUpInside" id="Uyv-fE-VTe"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2of-Vj-7v4">
-                                                        <rect key="frame" x="37" y="0.0" width="58" height="50"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="perfil"/>
-                                                        <connections>
-                                                            <action selector="Profile:" destination="rQy-0Q-IKQ" eventType="touchUpInside" id="aMm-qz-6Xs"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="95" id="y8Y-OH-6p4"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="mEG-9r-bDP"/>
-                                        </constraints>
-                                    </stackView>
-                                    <searchBar contentMode="redraw" barStyle="black" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="sOU-Wh-iek">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="51"/>
-                                        <color key="backgroundColor" red="0.63699167970000004" green="0.340541333" blue="0.25569960470000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="barTintColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-Hg-Uhd">
-                                <rect key="frame" x="72" y="752" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="r97-Eq-kQw" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="ZGK-YC-iX7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="MG8-xu-TLS"/>
-                        <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="a2e-FO-3GL" firstAttribute="leading" secondItem="MG8-xu-TLS" secondAttribute="leading" id="7wP-PT-6P1"/>
-                            <constraint firstItem="a2e-FO-3GL" firstAttribute="centerX" secondItem="qpM-6r-Wr9" secondAttribute="centerX" id="VU2-pF-8DS"/>
-                            <constraint firstItem="a2e-FO-3GL" firstAttribute="top" secondItem="MG8-xu-TLS" secondAttribute="top" id="gyM-uJ-N5m"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="XCn-2h-uaI" kind="presentation" identifier="profile" animates="NO" id="7MP-dq-mpk"/>
-                        <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="Vci-8L-3el"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kma-It-RCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1563.768115942029" y="318.75"/>
         </scene>
         <!--Control Panel View Controller-->
         <scene sceneID="cEL-5B-fGX">
@@ -1036,8 +945,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wFW-s1-5Qq"/>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="dtl-Db-StT"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="ghh-Ty-SuK"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="2C1-dL-feM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55Y-yl-btU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1124,8 +1033,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="home" animates="NO" id="h75-YN-lSx"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="ehx-4z-2Pv"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="K1Y-4w-ue1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImC-Rt-uQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1207,23 +1116,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="C1l-hH-Adk"/>
                     <connections>
-                        <segue destination="rQy-0Q-IKQ" kind="presentation" identifier="register" id="g3B-P7-eFJ"/>
+                        <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="register" modalPresentationStyle="fullScreen" id="Woo-Pv-QoV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1z-0w-sDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2052" y="-777"/>
         </scene>
-        <!--Carrousel View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="UI5-IW-Hwt">
             <objects>
-                <viewController id="Q7J-Yv-P8d" customClass="CarrouselViewController" customModule="Coppertaiment1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q7J-Yv-P8d" customClass="HomeViewController" customModule="Coppertaiment1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="McT-az-bAq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-G8-qMV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="145" width="414" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="xeK-Dx-nge"/>
@@ -1260,35 +1169,99 @@
                                     <outlet property="delegate" destination="Q7J-Yv-P8d" id="l94-Qb-eas"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p2b-Ru-VDN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="101"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="FGN-ss-V9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heg-oZ-wd4">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="ggC-L1-oy7"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="image 14"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnQ-HK-gw8">
+                                                <rect key="frame" x="149" y="0.0" width="116" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-2Z-68a">
+                                                <rect key="frame" x="319" y="0.0" width="95" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdD-tu-giY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping (1) 1" title=""/>
+                                                        <connections>
+                                                            <action selector="Basket:" destination="Q7J-Yv-P8d" eventType="touchUpInside" id="j3Y-uW-Psk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-ZQ-FX0">
+                                                        <rect key="frame" x="37" y="0.0" width="58" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="perfil"/>
+                                                        <connections>
+                                                            <action selector="Profile:" destination="Q7J-Yv-P8d" eventType="touchUpInside" id="QKO-ex-O0A"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="95" id="hBZ-Qx-QWF"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="14U-ZJ-uUD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <searchBar contentMode="redraw" barStyle="black" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="2zg-tK-Blk">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="51"/>
+                                        <color key="backgroundColor" red="0.63699167970000004" green="0.340541333" blue="0.25569960470000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="barTintColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-U9-krD">
-                                <rect key="frame" x="20" y="233" width="374" height="26"/>
+                                <rect key="frame" x="20" y="339" width="374" height="26"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5rY-mc-jhZ"/>
-                        <color key="backgroundColor" red="0.92685199870000001" green="0.63261466369999997" blue="0.55450285499999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="d7Z-G8-qMV" firstAttribute="top" secondItem="5rY-mc-jhZ" secondAttribute="top" id="5cx-G9-lYY"/>
-                            <constraint firstItem="Rba-U9-krD" firstAttribute="bottom" secondItem="d7Z-G8-qMV" secondAttribute="bottom" constant="-5" id="68x-hR-fez"/>
+                            <constraint firstItem="p2b-Ru-VDN" firstAttribute="top" secondItem="5rY-mc-jhZ" secondAttribute="top" id="1MP-92-qMz"/>
+                            <constraint firstItem="d7Z-G8-qMV" firstAttribute="top" secondItem="p2b-Ru-VDN" secondAttribute="bottom" id="8nN-vY-rP5"/>
+                            <constraint firstItem="p2b-Ru-VDN" firstAttribute="leading" secondItem="5rY-mc-jhZ" secondAttribute="leading" id="HH0-Re-Vi4"/>
+                            <constraint firstItem="Rba-U9-krD" firstAttribute="bottom" secondItem="d7Z-G8-qMV" secondAttribute="bottom" id="KMt-fh-reT"/>
                             <constraint firstItem="d7Z-G8-qMV" firstAttribute="leading" secondItem="5rY-mc-jhZ" secondAttribute="leading" id="QSn-oX-sZn"/>
                             <constraint firstItem="Rba-U9-krD" firstAttribute="leading" secondItem="5rY-mc-jhZ" secondAttribute="leading" constant="20" id="T0J-Qo-sPv"/>
                             <constraint firstItem="5rY-mc-jhZ" firstAttribute="trailing" secondItem="Rba-U9-krD" secondAttribute="trailing" constant="20" id="jLT-Se-Wni"/>
                             <constraint firstItem="d7Z-G8-qMV" firstAttribute="trailing" secondItem="5rY-mc-jhZ" secondAttribute="trailing" id="rU6-Qd-YVi"/>
+                            <constraint firstAttribute="trailing" secondItem="p2b-Ru-VDN" secondAttribute="trailing" id="suA-ch-zui"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pageView" destination="Rba-U9-krD" id="ZB2-bh-Wjk"/>
                         <outlet property="sliderCollectionView" destination="d7Z-G8-qMV" id="UN2-Sy-qKb"/>
+                        <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="BXN-Rq-NR3"/>
+                        <segue destination="XCn-2h-uaI" kind="presentation" identifier="profile" animates="NO" modalPresentationStyle="fullScreen" id="u1E-W1-RJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ds0-BO-y58" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="23"/>
+            <point key="canvasLocation" x="1564" y="246"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nDF-6d-VZk"/>
-        <segue reference="Gxm-aC-Jhv"/>
-        <segue reference="7Mg-uN-6Fq"/>
+        <segue reference="Woo-Pv-QoV"/>
+        <segue reference="u1E-W1-RJY"/>
+        <segue reference="BXN-Rq-NR3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Asset 1" width="46" height="45"/>
