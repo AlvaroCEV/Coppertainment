@@ -5,11 +5,16 @@ class HomeViewController: UIViewController {
     @IBAction func Basket(_ sender: Any) {
         performSegue(withIdentifier: "basket", sender: sender)
     }
+    
     @IBAction func Profile(_ sender: Any) {
         performSegue(withIdentifier: "profile", sender: sender)
     }
+    
     @IBOutlet weak var sliderCollectionView: UICollectionView!
+    
     @IBOutlet weak var pageView: UIPageControl!
+    
+    @IBOutlet weak var sliderCollectionViewTendences: UICollectionView!
     
     var imgArr = [  UIImage(named:"1"),
                     UIImage(named:"2") ,

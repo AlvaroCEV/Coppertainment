@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2729E929A787E900FE8E16 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */; };
+		0D2729EA29A787E900FE8E16 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */; };
+		0D2729EC29A78B7D00FE8E16 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2729EB29A78B7D00FE8E16 /* DishCategory.swift */; };
 		0D61A9DE29966B1B00B3E356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */; };
 		0D61A9E029966B1B00B3E356 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D61A9DF29966B1B00B3E356 /* SceneDelegate.swift */; };
 		0D61A9E529966B1B00B3E356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D61A9E329966B1B00B3E356 /* Main.storyboard */; };
@@ -27,11 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		0D2729EB29A78B7D00FE8E16 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
 		0D61A9DA29966B1B00B3E356 /* Coppertaiment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coppertaiment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D61A9DF29966B1B00B3E356 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0D61A9E429966B1B00B3E356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0D61A9E629966B1D00B3E356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D61A9E629966B1D00B3E356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Coppertaiment1/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		0D61A9E929966B1D00B3E356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D61A9EB29966B1D00B3E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D76A6C5299A48D6001BC6AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2729DF29A786B100FE8E16 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0D2729E029A786BF00FE8E16 /* CollectionViewCells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		0D2729E029A786BF00FE8E16 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0D2729E129A786D100FE8E16 /* CategoryCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		0D2729E129A786D100FE8E16 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */,
+				0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		0D61A9D129966B1B00B3E356 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +109,7 @@
 		0D61A9DC29966B1B00B3E356 /* Coppertaiment1 */ = {
 			isa = PBXGroup;
 			children = (
+				0D2729DF29A786B100FE8E16 /* CustomViews */,
 				0D76A6C2299A306F001BC6AC /* Model */,
 				0D76A6C4299A30A8001BC6AC /* View */,
 				0D76A6C3299A3091001BC6AC /* Controllers */,
@@ -94,6 +126,7 @@
 		0D76A6C2299A306F001BC6AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D2729EB29A78B7D00FE8E16 /* DishCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2729EA29A787E900FE8E16 /* CategoryCollectionViewCell.xib in Resources */,
 				0D61A9EA29966B1D00B3E356 /* LaunchScreen.storyboard in Resources */,
 				0D61A9E729966B1D00B3E356 /* Assets.xcassets in Resources */,
 				0D61A9E529966B1B00B3E356 /* Main.storyboard in Resources */,
@@ -196,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D76A6CC299A5762001BC6AC /* ViewMoreViewController.swift in Sources */,
+				0D2729E929A787E900FE8E16 /* CategoryCollectionViewCell.swift in Sources */,
 				0D76A6D8299A6015001BC6AC /* WishlistViewController.swift in Sources */,
+				0D2729EC29A78B7D00FE8E16 /* DishCategory.swift in Sources */,
 				0D76A6C6299A48D6001BC6AC /* LoginViewController.swift in Sources */,
 				0D76A6CE299A5D5E001BC6AC /* BasketViewController.swift in Sources */,
 				0D76A6DA299A605B001BC6AC /* AbilitiesViewController.swift in Sources */,
