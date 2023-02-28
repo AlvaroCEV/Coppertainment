@@ -109,8 +109,8 @@
 		0D61A9DC29966B1B00B3E356 /* Coppertaiment1 */ = {
 			isa = PBXGroup;
 			children = (
-				0D2729DF29A786B100FE8E16 /* CustomViews */,
 				0D76A6C2299A306F001BC6AC /* Model */,
+				0D2729DF29A786B100FE8E16 /* CustomViews */,
 				0D76A6C4299A30A8001BC6AC /* View */,
 				0D76A6C3299A3091001BC6AC /* Controllers */,
 				0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */,
