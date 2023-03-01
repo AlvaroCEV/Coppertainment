@@ -31,11 +31,11 @@ class WishlistViewController: UIViewController{
             }
         }
         WishlistMenu.menu = UIMenu(children : [
-            UIAction(title: "Control panel", handler: optionClosure),
-            UIAction(title: "Orders", handler: optionClosure),
+            UIAction(title: "Abilities", handler: optionClosure),
             UIAction(title: "Wishlist", state: .on, handler: optionClosure),
-            UIAction(title: "Abilities", handler: optionClosure)
-        ])
+            UIAction(title: "Orders", handler: optionClosure),
+            UIAction(title: "Control panel", handler: optionClosure)
+                    ])
         WishlistMenu.showsMenuAsPrimaryAction = true
         WishlistMenu.changesSelectionAsPrimaryAction = true
     }

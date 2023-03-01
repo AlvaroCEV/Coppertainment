@@ -31,10 +31,10 @@ class OrdersViewController: UIViewController{
             }
         }
         OrdersMenu.menu = UIMenu(children : [
-            UIAction(title: "Control panel", handler: optionClosure),
-            UIAction(title: "Orders", state: .on, handler: optionClosure),
+            UIAction(title: "Abilities", handler: optionClosure),
             UIAction(title: "Wishlist", handler: optionClosure),
-            UIAction(title: "Abilities", handler: optionClosure)
+            UIAction(title: "Orders", state: .on, handler: optionClosure),
+            UIAction(title: "Control panel", handler: optionClosure)
         ])
         OrdersMenu.showsMenuAsPrimaryAction = true
         OrdersMenu.changesSelectionAsPrimaryAction = true
