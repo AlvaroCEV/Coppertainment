@@ -1,6 +1,9 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
     
     var recibirJuego: String?
 
@@ -18,43 +21,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var sliderCollectionViewTendences: UICollectionView!
     
-    @IBOutlet weak var tendencesCollectionView: UICollectionView!
+    @IBOutlet var HomeTableView: UITableView!
     
-    @IBOutlet weak var shootersCollectionView: UICollectionView!
-    
-    @IBOutlet weak var reservesCollectionView: UICollectionView!
-    
-    @IBAction func tendencesVM(_ sender: UIButton) {
-        performSegue(withIdentifier: "VM", sender: sender)
-    }
-    
-    
-    
-    var tendences: [Game] = [
-        .init(id_videojuegos: "id1", nombre: "God of War: Ragnarok", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Elden Ring", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "The Legend of Zelda: Tears of the Kingdom", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Doom", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Fallout 76", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Hollow Knight", portada: "https://picsum.photos/100/200")
-    ]
-    var shooters: [Game] = [
-        .init(id_videojuegos: "id1", nombre: "Doom Eternal", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "SuperHOT", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Halo Infinie", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Borderlands 3", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Apex Legends", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Overwartch 2", portada: "https://picsum.photos/100/200")
-    ]
-    var reserves: [Game] = [
-        .init(id_videojuegos: "id1", nombre: "Viva Piñata", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Dark Souls Remastered", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Elden Ring", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Persona 5", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Nier Automata", portada: "https://picsum.photos/100/200"),
-        .init(id_videojuegos: "id1", nombre: "Undertale", portada: "https://picsum.photos/100/200")
-    ]
-    
+
     var imgArr = [  UIImage(named:"1"),
                     UIImage(named:"2") ,
                     UIImage(named:"3") ,
@@ -65,19 +34,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        HomeTableView.dataSource = self
+        HomeTableView.delegate = self
+        loadGames()
         pageView.numberOfPages = imgArr.count
         pageView.currentPage = 0
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }
 //        shootersCollectionView.dataSource = self
-        registerCells()
-    }
-    
-    private func registerCells() {
-        tendencesCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-        shootersCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-        reservesCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
     }
     
 
@@ -103,58 +68,66 @@ class HomeViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "enviar" {
-            let objDestino = segue.destination as! VideogameViewController
-            objDestino.recibirJuegoFinal = recibirJuego
-        }
+    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
+            let imageData = Data(base64Encoded: imageBase64String)
+            let image = UIImage(data: imageData!)
+            return image!
+    }
+    
+    var games: [Game] = []
+    
+    let url = URL(string: "")
+    func loadGames(){
+        URLSession.shared.dataTask(with: url!) {(data, response, error) in
+                    guard let data = data,
+                          let response = response as? HTTPURLResponse,
+                          response.statusCode == 200, error == nil else {return}
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                self.games.removeAll()
+                for element in json as! [[String : Any]] {
+                    self.games.append(Game(json: element))
+                }
+                DispatchQueue.main.async{
+                    self.HomeTableView.reloadData()
+                }
+            } catch let errorJson {
+                print(errorJson)
+            }
+        }.resume()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return games.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let homeRow: HomeRow = tableView.dequeueReusableCell(withIdentifier: "homeRowID", for: indexPath) as! HomeRow
+        let gamess = games[indexPath.row]
+  
+        homeRow.portada.image = convertBase64StringToImage(imageBase64String: gamess.portada)
+        homeRow.nombre.text = gamess.nombre
+        
+        
+        return homeRow
     }
 
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView {
-        case tendencesCollectionView:
-            return tendences.count
-        case shootersCollectionView:
-            return shooters.count
-        case reservesCollectionView:
-            return reserves.count
-        case sliderCollectionView:
             return imgArr.count
-        default: return 0
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        switch collectionView {
-        case tendencesCollectionView:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath)
-                as! CategoryCollectionViewCell
-            cell.setup(category: tendences[indexPath.row])
-            return cell
-        case shootersCollectionView:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath)
-                as! CategoryCollectionViewCell
-            cell.setup(category: shooters[indexPath.row])
-            return cell
-        case reservesCollectionView:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath)
-                as! CategoryCollectionViewCell
-            cell.setup(category: reserves[indexPath.row])
-            return cell
-        case sliderCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
             if let vc = cell.viewWithTag(111) as? UIImageView {
                 vc.image = imgArr[indexPath.row]
             }
             return cell
-        default: return UICollectionViewCell()
-        }
     }
 }
+
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     

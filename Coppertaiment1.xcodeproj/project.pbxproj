@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D2729E929A787E900FE8E16 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */; };
-		0D2729EA29A787E900FE8E16 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */; };
+		0D0BD3D929B9FDD9003C23D9 /* HomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0BD3D829B9FDD9003C23D9 /* HomeRow.swift */; };
 		0D32FD1029B5E18100EC4DD9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0D32FD0F29B5E18100EC4DD9 /* Kingfisher */; };
 		0D61A9DE29966B1B00B3E356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */; };
 		0D61A9E029966B1B00B3E356 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D61A9DF29966B1B00B3E356 /* SceneDelegate.swift */; };
@@ -35,16 +34,13 @@
 		0D9EFBAB29B88946009DE3D3 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAA29B88946009DE3D3 /* register.swift */; };
 		0D9EFBAD29B88C67009DE3D3 /* habilidadesUnlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */; };
 		0D9EFBAF29B88D27009DE3D3 /* habilidadesActivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */; };
-		0D9EFBB129B8A2D5009DE3D3 /* ViewMoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBB029B8A2D5009DE3D3 /* ViewMoreRow.swift */; };
-		0DC2237C29B0A0E10033765C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2237B29B0A0E10033765C /* String+Extension.swift */; };
 		0DC2237E29B0A7230033765C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2237D29B0A7230033765C /* Game.swift */; };
 		0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */; };
 		82E99E8BE5629524A2F8AB6E /* Pods_Coppertaiment1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4113F2B88822FB0BBDCF82CB /* Pods_Coppertaiment1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		0D0BD3D829B9FDD9003C23D9 /* HomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRow.swift; sourceTree = "<group>"; };
 		0D61A9DA29966B1B00B3E356 /* Coppertaiment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coppertaiment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D61A9DF29966B1B00B3E356 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +68,6 @@
 		0D9EFBAA29B88946009DE3D3 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
 		0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesUnlock.swift; sourceTree = "<group>"; };
 		0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesActivar.swift; sourceTree = "<group>"; };
-		0D9EFBB029B8A2D5009DE3D3 /* ViewMoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreRow.swift; sourceTree = "<group>"; };
-		0DC2237B29B0A0E10033765C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0DC2237D29B0A7230033765C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1AC210DBE2F0A8CE31D97446 /* Pods-Coppertaiment1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppertaiment1.release.xcconfig"; path = "Target Support Files/Pods-Coppertaiment1/Pods-Coppertaiment1.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,32 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D2729DF29A786B100FE8E16 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				0D2729E029A786BF00FE8E16 /* CollectionViewCells */,
-				0DC2237B29B0A0E10033765C /* String+Extension.swift */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		0D2729E029A786BF00FE8E16 /* CollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				0D2729E129A786D100FE8E16 /* CategoryCollectionViewCell */,
-			);
-			path = CollectionViewCells;
-			sourceTree = "<group>";
-		};
-		0D2729E129A786D100FE8E16 /* CategoryCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				0D2729E729A787E900FE8E16 /* CategoryCollectionViewCell.swift */,
-				0D2729E829A787E900FE8E16 /* CategoryCollectionViewCell.xib */,
-			);
-			path = CategoryCollectionViewCell;
-			sourceTree = "<group>";
-		};
 		0D61A9D129966B1B00B3E356 = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				0D76A6C2299A306F001BC6AC /* Model */,
-				0D2729DF29A786B100FE8E16 /* CustomViews */,
 				0D76A6C4299A30A8001BC6AC /* View */,
 				0D76A6C3299A3091001BC6AC /* Controllers */,
 				0D61A9DD29966B1B00B3E356 /* AppDelegate.swift */,
@@ -194,7 +161,7 @@
 		0D76A6C4299A30A8001BC6AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D9EFBB029B8A2D5009DE3D3 /* ViewMoreRow.swift */,
+				0D0BD3D829B9FDD9003C23D9 /* HomeRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D2729EA29A787E900FE8E16 /* CategoryCollectionViewCell.xib in Resources */,
 				0D61A9EA29966B1D00B3E356 /* LaunchScreen.storyboard in Resources */,
 				0D61A9E729966B1D00B3E356 /* Assets.xcassets in Resources */,
 				0D61A9E529966B1B00B3E356 /* Main.storyboard in Resources */,
@@ -340,7 +306,6 @@
 			files = (
 				0D76A6CC299A5762001BC6AC /* ViewMoreViewController.swift in Sources */,
 				0D9EFB9F29B88394009DE3D3 /* gameInfo.swift in Sources */,
-				0D2729E929A787E900FE8E16 /* CategoryCollectionViewCell.swift in Sources */,
 				0D76A6D8299A6015001BC6AC /* WishlistViewController.swift in Sources */,
 				0D9EFBA129B8855A009DE3D3 /* generalData.swift in Sources */,
 				0DC2237E29B0A7230033765C /* Game.swift in Sources */,
@@ -351,7 +316,6 @@
 				0D9EFBAD29B88C67009DE3D3 /* habilidadesUnlock.swift in Sources */,
 				0D76A6DA299A605B001BC6AC /* AbilitiesViewController.swift in Sources */,
 				0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */,
-				0DC2237C29B0A0E10033765C /* String+Extension.swift in Sources */,
 				0D76A6D6299A5F81001BC6AC /* OrdersViewController.swift in Sources */,
 				0D9EFBAB29B88946009DE3D3 /* register.swift in Sources */,
 				0D9EFBA329B885E3009DE3D3 /* pedidos.swift in Sources */,
@@ -362,8 +326,8 @@
 				0D76A6D4299A5F13001BC6AC /* ControlPanelViewController.swift in Sources */,
 				0D76A6D2299A5E29001BC6AC /* GameActivationViewController.swift in Sources */,
 				0D61A9E029966B1B00B3E356 /* SceneDelegate.swift in Sources */,
-				0D9EFBB129B8A2D5009DE3D3 /* ViewMoreRow.swift in Sources */,
 				0D9EFBA929B88901009DE3D3 /* login.swift in Sources */,
+				0D0BD3D929B9FDD9003C23D9 /* HomeRow.swift in Sources */,
 				0D76A6C8299A4921001BC6AC /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
