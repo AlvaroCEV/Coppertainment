@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-class BasketViewController: UIViewController {
+class BasketViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }

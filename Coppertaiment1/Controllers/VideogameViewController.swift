@@ -3,6 +3,8 @@ import Foundation
 
 class VideogameViewController: UIViewController {
     
+    var recibirJuegoFinal: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
