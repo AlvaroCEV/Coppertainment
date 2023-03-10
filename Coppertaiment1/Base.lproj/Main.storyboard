@@ -68,6 +68,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                 <connections>
                                     <action selector="Login:" destination="pjS-1x-RuN" eventType="touchUpInside" id="1Ug-Sl-PNv"/>
+                                    <action selector="login:" destination="pjS-1x-RuN" eventType="touchUpInside" id="Jwe-fF-hnp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,6 +94,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Pk-t2-2El"/>
                     <connections>
+                        <outlet property="loginName" destination="T1l-1M-Jlc" id="BzO-mh-IPM"/>
+                        <outlet property="loginPassword" destination="jtO-2x-aZg" id="Rm4-7R-dvK"/>
                         <segue destination="aHD-MN-pzI" kind="show" identifier="registerPage" id="tMQ-yy-bzD"/>
                         <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="DjJ-Gw-DvK"/>
                     </connections>
@@ -871,7 +874,7 @@
                                     <constraint firstAttribute="height" constant="142" id="A4a-vS-6lh"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="xAv-Kk-VCc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basketRowID" rowHeight="96" id="xAv-Kk-VCc" customClass="BasketRow" customModule="Coppertaiment1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xAv-Kk-VCc" id="NKc-SS-aQJ">
@@ -895,15 +898,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPo-Vd-1nr">
-                                                    <rect key="frame" x="312" y="51" width="41.5" height="20.5"/>
+                                                    <rect key="frame" x="289" y="51" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qev-Qe-qXN">
-                                                    <rect key="frame" x="166" y="47" width="67" height="31"/>
+                                                    <rect key="frame" x="166" y="47" width="44" height="31"/>
+                                                    <color key="tintColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system">
+                                                        <backgroundConfiguration key="background" image="trash.fill" catalog="system"/>
+                                                    </buttonConfiguration>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -919,6 +925,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.71609371899999996" green="0.38362720610000001" blue="0.28540009259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="basketImageGames" destination="IgN-CO-D7j" id="mzv-wI-nab"/>
+                                            <outlet property="basketNameGames" destination="dPZ-PE-hRj" id="UeK-vw-Hpt"/>
+                                            <outlet property="basketPriceGames" destination="XPo-Vd-1nr" id="w0B-cr-rY2"/>
+                                            <outlet property="basketTrashGames" destination="Qev-Qe-qXN" id="VFP-IQ-AzW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -926,7 +938,7 @@
                                 <rect key="frame" x="20" y="303" width="374" height="390"/>
                                 <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="v1j-KC-WzR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wishlistBasketRowID" rowHeight="96" id="v1j-KC-WzR" customClass="WishlistBasketRow" customModule="Coppertaiment1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1j-KC-WzR" id="Yt4-aP-xvF">
@@ -956,9 +968,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edj-e5-7ju">
-                                                    <rect key="frame" x="287" y="48" width="67" height="31"/>
+                                                    <rect key="frame" x="287" y="48" width="50" height="31"/>
+                                                    <color key="tintColor" red="0.48237717149999998" green="0.48249733449999999" blue="0.47418367859999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -974,6 +987,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="wishlistBaskerImageGames" destination="UKM-bm-xec" id="MY3-Tp-nnq"/>
+                                            <outlet property="wishlistBasketAddGames" destination="edj-e5-7ju" id="BAm-8Z-Qvw"/>
+                                            <outlet property="wishlistBasketNameGames" destination="7hn-JO-LJY" id="Oel-7G-Anu"/>
+                                            <outlet property="wishlistBasketPriceGames" destination="8MX-Gd-eX8" id="j2a-oQ-Uab"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1038,9 +1057,12 @@
                                         <rect key="frame" x="8" y="94.5" width="378" height="31"/>
                                         <color key="backgroundColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                        <buttonConfiguration key="configuration" style="filled" title="Proceed with the payment">
                                             <color key="baseBackgroundColor" red="0.53484725950000001" green="0.21834635729999999" blue="0.1296049356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="Payment:" destination="Xcx-WK-d1e" eventType="touchUpInside" id="OJ9-lt-YSl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.71609371899999996" green="0.38362720610000001" blue="0.28540009259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1066,7 +1088,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BasketTableView" destination="k0G-IU-w91" id="9D4-88-Cdd"/>
+                        <outlet property="WishlistTableView" destination="BAN-2y-7Fq" id="haP-OR-0z4"/>
                         <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="oai-ko-MJS"/>
+                        <segue destination="Lku-nR-l5h" kind="presentation" identifier="payment" animates="NO" modalPresentationStyle="fullScreen" id="iAY-ts-WWf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Opz-1K-XBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1130,22 +1155,49 @@
                                     <constraint firstAttribute="height" constant="80" id="irn-wk-rpt"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLh-5E-zvr">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="paymentConfirm:" destination="Lku-nR-l5h" eventType="touchUpInside" id="qed-PR-W7G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VxI-g0-6yg"/>
                         <color key="backgroundColor" red="0.79519134759999999" green="0.42665880919999999" blue="0.3193911016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yLh-5E-zvr" firstAttribute="centerX" secondItem="WIQ-Ta-gC4" secondAttribute="centerX" id="0Fw-dJ-faP"/>
                             <constraint firstItem="VxI-g0-6yg" firstAttribute="trailing" secondItem="xsS-ks-w2a" secondAttribute="trailing" id="Nd2-2w-kQJ"/>
                             <constraint firstItem="xsS-ks-w2a" firstAttribute="top" secondItem="VxI-g0-6yg" secondAttribute="top" id="taY-k6-J6b"/>
                             <constraint firstItem="xsS-ks-w2a" firstAttribute="leading" secondItem="WIQ-Ta-gC4" secondAttribute="leading" id="vk5-kM-bPb"/>
+                            <constraint firstItem="yLh-5E-zvr" firstAttribute="centerY" secondItem="WIQ-Ta-gC4" secondAttribute="centerY" id="yl9-Do-nBS"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="8Qx-6T-pZ3"/>
+                        <segue destination="NQt-Ip-gSl" kind="presentation" identifier="activation" animates="NO" modalPresentationStyle="fullScreen" id="kA1-4p-Kes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugR-d9-BF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3202.898550724638" y="318.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lem-bb-vRx">
+            <objects>
+                <navigationController id="TCv-et-K0Z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y0K-8d-UgI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q7J-Yv-P8d" kind="relationship" relationship="rootViewController" id="cph-rS-gqn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kww-Av-PCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="670"/>
         </scene>
         <!--Videogame View Controller-->
         <scene sceneID="Ith-PW-GGy">
@@ -1432,7 +1484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTY-cC-StQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657.97101449275362" y="-12.053571428571429"/>
+            <point key="canvasLocation" x="636" y="5"/>
         </scene>
         <!--Control Panel View Controller-->
         <scene sceneID="cEL-5B-fGX">
@@ -1964,6 +2016,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="C1l-hH-Adk"/>
                     <connections>
+                        <outlet property="confirmNewPassword" destination="D1z-Oq-oej" id="s1K-eg-k4Q"/>
+                        <outlet property="newName" destination="Wi6-og-wne" id="gu5-rw-wBL"/>
+                        <outlet property="newPassword" destination="xAQ-eH-Vfx" id="SCz-dY-9mb"/>
                         <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="register" modalPresentationStyle="fullScreen" id="Woo-Pv-QoV"/>
                     </connections>
                 </viewController>
@@ -2135,27 +2190,28 @@
                             <constraint firstAttribute="trailing" secondItem="p2b-Ru-VDN" secondAttribute="trailing" id="suA-ch-zui"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UFf-Ot-pRH"/>
                     <connections>
                         <outlet property="HomeTableView" destination="6YL-se-iVK" id="jBi-CU-e3L"/>
                         <outlet property="pageView" destination="Rba-U9-krD" id="ZB2-bh-Wjk"/>
                         <outlet property="sliderCollectionView" destination="d7Z-G8-qMV" id="UN2-Sy-qKb"/>
                         <segue destination="Xcx-WK-d1e" kind="presentation" identifier="basket" animates="NO" modalPresentationStyle="fullScreen" id="BXN-Rq-NR3"/>
                         <segue destination="XCn-2h-uaI" kind="presentation" identifier="profile" animates="NO" modalPresentationStyle="fullScreen" id="u1E-W1-RJY"/>
-                        <segue destination="r97-Eq-kQw" kind="presentation" identifier="enviar" animates="NO" modalPresentationStyle="fullScreen" id="RNe-BF-34k"/>
+                        <segue destination="r97-Eq-kQw" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="bae-yY-jkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ds0-BO-y58" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563.768115942029" y="245.75892857142856"/>
+            <point key="canvasLocation" x="1564" y="223"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DjJ-Gw-DvK"/>
-        <segue reference="QFk-rF-X1D"/>
-        <segue reference="u1E-W1-RJY"/>
-        <segue reference="BXN-Rq-NR3"/>
+        <segue reference="Woo-Pv-QoV"/>
+        <segue reference="9nd-ur-d10"/>
+        <segue reference="9QU-wb-LDk"/>
+        <segue reference="1cq-Eg-WRY"/>
         <segue reference="9F0-FP-JCJ"/>
-        <segue reference="v7d-ev-pqh"/>
+        <segue reference="GxB-gk-T9m"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="393" height="215"/>
@@ -2169,5 +2225,7 @@
         <image name="png-clipart-car-speedometer-computer-icons-performance-text-trademark (1) 1" width="45" height="29"/>
         <image name="png-clipart-car-speedometer-computer-icons-performance-text-trademark (1) 1 (1)" width="45" height="29"/>
         <image name="png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping (1) 1" width="32" height="27"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

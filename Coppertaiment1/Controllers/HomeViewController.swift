@@ -76,7 +76,7 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     var games: [Game] = []
     
-    let url = URL(string: "")
+    let url = URL(string: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
     func loadGames(){
         URLSession.shared.dataTask(with: url!) {(data, response, error) in
                     guard let data = data,
@@ -107,7 +107,6 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
   
         homeRow.portada.image = convertBase64StringToImage(imageBase64String: gamess.portada)
         homeRow.nombre.text = gamess.nombre
-        
         
         return homeRow
     }

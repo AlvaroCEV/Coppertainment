@@ -35,6 +35,10 @@
 		0D9EFBAD29B88C67009DE3D3 /* habilidadesUnlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */; };
 		0D9EFBAF29B88D27009DE3D3 /* habilidadesActivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */; };
 		0DC2237E29B0A7230033765C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2237D29B0A7230033765C /* Game.swift */; };
+		0DC45D6429BB207F005BD21A /* WishlistBasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */; };
+		0DC45D6629BB20DD005BD21A /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6529BB20DD005BD21A /* BasketRow.swift */; };
+		0DC45D6829BB2112005BD21A /* basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6729BB2112005BD21A /* basket.swift */; };
+		0DC45D6A29BB3122005BD21A /* basketGameBuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6929BB3122005BD21A /* basketGameBuy.swift */; };
 		0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */; };
 		82E99E8BE5629524A2F8AB6E /* Pods_Coppertaiment1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4113F2B88822FB0BBDCF82CB /* Pods_Coppertaiment1.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,10 @@
 		0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesUnlock.swift; sourceTree = "<group>"; };
 		0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesActivar.swift; sourceTree = "<group>"; };
 		0DC2237D29B0A7230033765C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistBasketRow.swift; sourceTree = "<group>"; };
+		0DC45D6529BB20DD005BD21A /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
+		0DC45D6729BB2112005BD21A /* basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basket.swift; sourceTree = "<group>"; };
+		0DC45D6929BB3122005BD21A /* basketGameBuy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketGameBuy.swift; sourceTree = "<group>"; };
 		0DE1E2F129A60F5400925CA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1AC210DBE2F0A8CE31D97446 /* Pods-Coppertaiment1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coppertaiment1.release.xcconfig"; path = "Target Support Files/Pods-Coppertaiment1/Pods-Coppertaiment1.release.xcconfig"; sourceTree = "<group>"; };
 		4113F2B88822FB0BBDCF82CB /* Pods_Coppertaiment1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coppertaiment1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +143,8 @@
 				0D9EFBA829B88901009DE3D3 /* login.swift */,
 				0D9EFBAA29B88946009DE3D3 /* register.swift */,
 				0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */,
+				0DC45D6729BB2112005BD21A /* basket.swift */,
+				0DC45D6929BB3122005BD21A /* basketGameBuy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				0D0BD3D829B9FDD9003C23D9 /* HomeRow.swift */,
+				0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */,
+				0DC45D6529BB20DD005BD21A /* BasketRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,15 +322,19 @@
 				0D9EFBA129B8855A009DE3D3 /* generalData.swift in Sources */,
 				0DC2237E29B0A7230033765C /* Game.swift in Sources */,
 				0D76A6C6299A48D6001BC6AC /* LoginViewController.swift in Sources */,
+				0DC45D6A29BB3122005BD21A /* basketGameBuy.swift in Sources */,
 				0D76A6CE299A5D5E001BC6AC /* BasketViewController.swift in Sources */,
+				0DC45D6629BB20DD005BD21A /* BasketRow.swift in Sources */,
 				0D9EFBA529B88649009DE3D3 /* ordersInfo.swift in Sources */,
 				0D9EFBA729B88699009DE3D3 /* habilidades.swift in Sources */,
+				0DC45D6429BB207F005BD21A /* WishlistBasketRow.swift in Sources */,
 				0D9EFBAD29B88C67009DE3D3 /* habilidadesUnlock.swift in Sources */,
 				0D76A6DA299A605B001BC6AC /* AbilitiesViewController.swift in Sources */,
 				0DE1E2F229A60F5400925CA9 /* HomeViewController.swift in Sources */,
 				0D76A6D6299A5F81001BC6AC /* OrdersViewController.swift in Sources */,
 				0D9EFBAB29B88946009DE3D3 /* register.swift in Sources */,
 				0D9EFBA329B885E3009DE3D3 /* pedidos.swift in Sources */,
+				0DC45D6829BB2112005BD21A /* basket.swift in Sources */,
 				0D76A6D0299A5DD6001BC6AC /* PaymentViewController.swift in Sources */,
 				0D76A6CA299A56FA001BC6AC /* VideogameViewController.swift in Sources */,
 				0D9EFBAF29B88D27009DE3D3 /* habilidadesActivar.swift in Sources */,

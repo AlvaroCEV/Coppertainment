@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image 14" translatesAutoresizingMaskIntoConstraints="NO" id="hG4-CC-h5T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="copper (1)" translatesAutoresizingMaskIntoConstraints="NO" id="hG4-CC-h5T">
                                 <rect key="frame" x="30" y="-290" width="374" height="1330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 215" translatesAutoresizingMaskIntoConstraints="NO" id="7Gr-gu-4sy">
+                                <rect key="frame" x="20" y="615" width="374" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -30,6 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image 14" width="40" height="40"/>
+        <image name="Group 215" width="368" height="46"/>
+        <image name="copper (1)" width="188" height="187"/>
     </resources>
 </document>
