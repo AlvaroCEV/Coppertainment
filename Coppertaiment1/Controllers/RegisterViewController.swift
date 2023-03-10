@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
         
         let url = URL(string: "https://superapi.netlify.app/api/register")!
         var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "POST"
         let postUser: [String : Any] = [
@@ -31,8 +31,7 @@ class RegisterViewController: UIViewController {
         ]
         
         if newPassword == confirmNewPassword {
-            
-                
+    
         struct ResponseObject<T: Decodable>: Decodable {
             let form: T
         }

@@ -67,8 +67,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                 <connections>
-                                    <action selector="Login:" destination="pjS-1x-RuN" eventType="touchUpInside" id="1Ug-Sl-PNv"/>
-                                    <action selector="login:" destination="pjS-1x-RuN" eventType="touchUpInside" id="Jwe-fF-hnp"/>
+                                    <action selector="LOGIN:" destination="pjS-1x-RuN" eventType="touchUpInside" id="Qee-VO-ORg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -288,7 +287,7 @@
                         <segue destination="XCn-2h-uaI" kind="presentation" identifier="CP" animates="NO" modalPresentationStyle="fullScreen" id="g9C-UL-iop"/>
                         <segue destination="KuE-JK-HWy" kind="presentation" identifier="orders" animates="NO" modalPresentationStyle="fullScreen" id="WwA-MY-rW9"/>
                         <segue destination="Fvw-Qe-DaM" kind="presentation" identifier="wishlist" animates="NO" modalPresentationStyle="fullScreen" id="Lmk-Rt-SLw"/>
-                        <segue destination="hFj-Cm-PX4" kind="show" identifier="abilityInfo" id="lq4-4t-oEp"/>
+                        <segue destination="hFj-Cm-PX4" kind="presentation" identifier="abilityInfo" animates="NO" modalPresentationStyle="fullScreen" id="lq4-4t-oEp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdC-c5-K9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -300,7 +299,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="hFj-Cm-PX4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fci-MZ-cMO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANKRUPTY HOMUNCULUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-hZ-cUq">
@@ -803,6 +802,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="LVj-S5-gMh"/>
                     <connections>
+                        <outlet property="gameCode" destination="oBe-ds-KJi" id="Clg-9R-aSt"/>
+                        <outlet property="gameDiscount" destination="nRP-Bw-Wsb" id="bry-AO-opy"/>
+                        <outlet property="gameFinalPrice" destination="LBX-DW-lq8" id="giF-xS-njE"/>
+                        <outlet property="gameFullPrice" destination="bq5-ME-ErI" id="uNZ-Wh-wLw"/>
+                        <outlet property="gameImage" destination="hNC-Q9-I8y" id="Qos-2f-LiA"/>
+                        <outlet property="gameName" destination="pfW-Ku-ahj" id="RC9-hA-GF0"/>
+                        <outlet property="gamePlatform" destination="e4b-IO-BYy" id="LVZ-H7-gla"/>
                         <segue destination="Q7J-Yv-P8d" kind="presentation" identifier="home" animates="NO" modalPresentationStyle="fullScreen" id="eGV-Bh-cob"/>
                     </connections>
                 </viewController>
@@ -1182,22 +1188,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugR-d9-BF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3202.898550724638" y="318.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Lem-bb-vRx">
-            <objects>
-                <navigationController id="TCv-et-K0Z" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y0K-8d-UgI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Q7J-Yv-P8d" kind="relationship" relationship="rootViewController" id="cph-rS-gqn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kww-Av-PCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="271" y="670"/>
         </scene>
         <!--Videogame View Controller-->
         <scene sceneID="Ith-PW-GGy">
@@ -2206,7 +2196,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Woo-Pv-QoV"/>
+        <segue reference="DjJ-Gw-DvK"/>
         <segue reference="9nd-ur-d10"/>
         <segue reference="9QU-wb-LDk"/>
         <segue reference="1cq-Eg-WRY"/>
