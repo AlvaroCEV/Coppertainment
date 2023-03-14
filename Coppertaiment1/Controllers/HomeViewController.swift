@@ -90,7 +90,7 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     var games:[Game] = []
     
-    let url = URL(string: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+    let url = URL(string: "")
     func loadGames(){
         URLSession.shared.dataTask(with: url!) {(data, response, error) in
                     guard let data = data,

@@ -82,7 +82,7 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        performSegue(withIdentifier: "register", sender: sender)
+        performSegue(withIdentifier: "log", sender: sender)
     }
     
 }
