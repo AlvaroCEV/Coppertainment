@@ -34,6 +34,9 @@
 		0D9EFBAB29B88946009DE3D3 /* register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAA29B88946009DE3D3 /* register.swift */; };
 		0D9EFBAD29B88C67009DE3D3 /* habilidadesUnlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */; };
 		0D9EFBAF29B88D27009DE3D3 /* habilidadesActivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */; };
+		0DBAC19729C0720900617F5B /* OrdersRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBAC19629C0720900617F5B /* OrdersRow.swift */; };
+		0DBAC19929C0722000617F5B /* WishlistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBAC19829C0722000617F5B /* WishlistRow.swift */; };
+		0DBAC19B29C0768500617F5B /* littleGameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBAC19A29C0768500617F5B /* littleGameInfo.swift */; };
 		0DC2237E29B0A7230033765C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC2237D29B0A7230033765C /* Game.swift */; };
 		0DC45D6429BB207F005BD21A /* WishlistBasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */; };
 		0DC45D6629BB20DD005BD21A /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC45D6529BB20DD005BD21A /* BasketRow.swift */; };
@@ -72,6 +75,9 @@
 		0D9EFBAA29B88946009DE3D3 /* register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = register.swift; sourceTree = "<group>"; };
 		0D9EFBAC29B88C67009DE3D3 /* habilidadesUnlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesUnlock.swift; sourceTree = "<group>"; };
 		0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habilidadesActivar.swift; sourceTree = "<group>"; };
+		0DBAC19629C0720900617F5B /* OrdersRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRow.swift; sourceTree = "<group>"; };
+		0DBAC19829C0722000617F5B /* WishlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRow.swift; sourceTree = "<group>"; };
+		0DBAC19A29C0768500617F5B /* littleGameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleGameInfo.swift; sourceTree = "<group>"; };
 		0DC2237D29B0A7230033765C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistBasketRow.swift; sourceTree = "<group>"; };
 		0DC45D6529BB20DD005BD21A /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				0D9EFBAE29B88D26009DE3D3 /* habilidadesActivar.swift */,
 				0DC45D6729BB2112005BD21A /* basket.swift */,
 				0DC45D6929BB3122005BD21A /* basketGameBuy.swift */,
+				0DBAC19A29C0768500617F5B /* littleGameInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 				0D0BD3D829B9FDD9003C23D9 /* HomeRow.swift */,
 				0DC45D6329BB207F005BD21A /* WishlistBasketRow.swift */,
 				0DC45D6529BB20DD005BD21A /* BasketRow.swift */,
+				0DBAC19629C0720900617F5B /* OrdersRow.swift */,
+				0DBAC19829C0722000617F5B /* WishlistRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 				0D76A6CC299A5762001BC6AC /* ViewMoreViewController.swift in Sources */,
 				0D9EFB9F29B88394009DE3D3 /* gameInfo.swift in Sources */,
 				0D76A6D8299A6015001BC6AC /* WishlistViewController.swift in Sources */,
+				0DBAC19B29C0768500617F5B /* littleGameInfo.swift in Sources */,
 				0D9EFBA129B8855A009DE3D3 /* generalData.swift in Sources */,
 				0DC2237E29B0A7230033765C /* Game.swift in Sources */,
 				0D76A6C6299A48D6001BC6AC /* LoginViewController.swift in Sources */,
@@ -335,8 +345,10 @@
 				0D9EFBAB29B88946009DE3D3 /* register.swift in Sources */,
 				0D9EFBA329B885E3009DE3D3 /* pedidos.swift in Sources */,
 				0DC45D6829BB2112005BD21A /* basket.swift in Sources */,
+				0DBAC19929C0722000617F5B /* WishlistRow.swift in Sources */,
 				0D76A6D0299A5DD6001BC6AC /* PaymentViewController.swift in Sources */,
 				0D76A6CA299A56FA001BC6AC /* VideogameViewController.swift in Sources */,
+				0DBAC19729C0720900617F5B /* OrdersRow.swift in Sources */,
 				0D9EFBAF29B88D27009DE3D3 /* habilidadesActivar.swift in Sources */,
 				0D61A9DE29966B1B00B3E356 /* AppDelegate.swift in Sources */,
 				0D76A6D4299A5F13001BC6AC /* ControlPanelViewController.swift in Sources */,

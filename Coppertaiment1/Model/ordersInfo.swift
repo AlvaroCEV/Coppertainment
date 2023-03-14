@@ -11,6 +11,5 @@ class ordersInfo : Codable{
         precio = json["precio"] as? String ?? ""
         plataforma = json["plataforma"] as? String ?? ""
         code = json["code"] as? String ?? ""
-
     }
 }

@@ -40,9 +40,7 @@ class LoginViewController: UIViewController{
                 }
             }.resume()
         }
-        if {
             performSegue(withIdentifier: "login", sender: sender)
-        }
     }
     @IBOutlet var loginPassword: UITextField!
     @IBOutlet var loginName: UITextField!

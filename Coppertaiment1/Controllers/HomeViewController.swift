@@ -2,7 +2,7 @@ import UIKit
 
 class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
     
-    
+    var seleccion = -1
     
     
     var recibirJuego: String?
@@ -45,6 +45,20 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
 //        shootersCollectionView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VG" {
+            let videojuegoVista = segue.destination as! VideogameViewController
+            videojuegoVista.recibirJuegoFinal = games[seleccion]
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        seleccion = indexPath.row
+        performSegue(withIdentifier: "VG", sender: nil)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -74,7 +88,7 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
             return image!
     }
     
-    var games: [Game] = []
+    var games:[Game] = []
     
     let url = URL(string: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
     func loadGames(){

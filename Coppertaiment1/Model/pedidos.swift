@@ -10,6 +10,5 @@ class pedidos : Codable{
         portada = json["portada"] as? String ?? ""
         precio = json["precio"] as? String ?? ""
         plataforma = json["plataforma"] as? String ?? ""
-
     }
 }
