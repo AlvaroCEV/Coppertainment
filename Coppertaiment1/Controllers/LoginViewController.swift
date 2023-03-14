@@ -4,6 +4,8 @@ import Foundation
 
 class LoginViewController: UIViewController{
     
+    static var usuario = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -39,10 +41,14 @@ class LoginViewController: UIViewController{
                 }
             }.resume()
             if general == "True" {
+                LoginViewController.usuario = name.text!
                 performSegue(withIdentifier: "login", sender: sender)
             }
         }
     }
+    
+    
+    
     @IBAction func RegisterPage(_ sender: Any) {
         performSegue(withIdentifier: "registerPage", sender: sender)
     }
