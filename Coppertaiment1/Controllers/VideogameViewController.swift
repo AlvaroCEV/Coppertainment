@@ -7,6 +7,7 @@ class VideogameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadGame()
     }
     
     @IBOutlet var GameImage: UIImageView!
@@ -29,29 +30,28 @@ class VideogameViewController: UIViewController {
         
     }
     
-    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
-            let imageData = Data(base64Encoded: imageBase64String)
+    func convertBase64StringToImage (imageBase64String:String) -> UIImage? {
+        let imageData = Data(base64Encoded: imageBase64String)
+        if imageData != nil {
             let image = UIImage(data: imageData!)
-            return image!
+            return image
+        }
+            return UIImage(named: "1")
     }
     
     var general: gameInfo?
     
-    func loadControlPanel(){
-        let url = URL(string: "")
+    func loadGame(){
+        let url = URL(string: "http://127.0.0.1:5000/coppertainment/game/" + (recibirJuegoFinal?.id_videojuegos ?? ""))
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
-        let getGame: [String : Any] = [
-            "videogame" : recibirJuegoFinal?.nombre
-        ]
         URLSession.shared.dataTask(with: url!) { [self](data, response, error) in
                     guard let data = data,
                           let response = response as? HTTPURLResponse,
                           response.statusCode == 200, error == nil else {return}
             do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: getGame, options: .prettyPrinted)
                 let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 general = gameInfo(json: json as! [String : Any])
                 let C = self.general?.plataforma

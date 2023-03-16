@@ -50,23 +50,57 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
     
     let url = URL(string: "")
     func loadOrdersGames(){
-        URLSession.shared.dataTask(with: url!) {(data, response, error) in
-                    guard let data = data,
-                          let response = response as? HTTPURLResponse,
-                          response.statusCode == 200, error == nil else {return}
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                self.games.removeAll()
-                for element in json as! [[String : Any]] {
-                    self.games.append(pedidos(json: element))
-                }
-                DispatchQueue.main.async{
-                    self.ordersTableView.reloadData()
-                }
-            } catch let errorJson {
-                print(errorJson)
+        
+        let url = URL(string: "")
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
+        let SendUser: [String : Any] = [
+            "usuario" : LoginViewController.usuario
+        ]
+            struct ResponseObject<T: Decodable>: Decodable {
+                let form: T
             }
-        }.resume()
+            
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: SendUser, options: .prettyPrinted)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard
+                    let data = data,
+                    let response = response as? HTTPURLResponse,
+                    error == nil
+                else {                                                               // check for fundamental networking error
+                    print("error", error ?? URLError(.badServerResponse))
+                    return
+                }
+                
+                // do whatever you want with the `data`, e.g.:
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                    self.games.removeAll()
+                    for element in json as! [[String : Any]] {
+                        self.games.append(pedidos(json: element))
+                    }
+                    DispatchQueue.main.async{
+                        self.ordersTableView.reloadData()
+                    }
+                } catch {
+                    print(error) // parsing error
+                    
+                    if let responseString = String(data: data, encoding: .utf8) {
+                        print("responseString = \(responseString)")
+                    } else {
+                        print("unable to parse response as string")
+                    }
+                }
+            }
+            task.resume()
     }
     
     func convertBase64StringToImage (imageBase64String:String) -> UIImage {

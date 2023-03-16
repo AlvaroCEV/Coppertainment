@@ -34,9 +34,10 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadGames()
+        HomeTableView.reloadData()
         HomeTableView.dataSource = self
         HomeTableView.delegate = self
-        loadGames()
         pageView.numberOfPages = imgArr.count
         pageView.currentPage = 0
         DispatchQueue.main.async {
@@ -82,16 +83,25 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
         
     }
     
-    func convertBase64StringToImage (imageBase64String:String) -> UIImage {
-            let imageData = Data(base64Encoded: imageBase64String)
+    func convertBase64StringToImage (imageBase64String:String) -> UIImage? {
+        let imageData = Data(base64Encoded: imageBase64String)
+        if imageData != nil {
             let image = UIImage(data: imageData!)
-            return image!
+            return image
+        }
+            return UIImage(named: "1")
     }
     
     var games:[Game] = []
     
-    let url = URL(string: "")
+   
     func loadGames(){
+        print("holaaa")
+        let url = URL(string: "http://127.0.0.1:5000/coppertainment/home/all")
+        var request = URLRequest(url: url!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
         URLSession.shared.dataTask(with: url!) {(data, response, error) in
                     guard let data = data,
                           let response = response as? HTTPURLResponse,
@@ -99,8 +109,9 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 self.games.removeAll()
-                for element in json as! [[String : Any]] {
-                    self.games.append(Game(json: element))
+                for name in json as! [[String : Any]] {
+                    self.games.append(Game(json: name))
+                    print(self.games)
                 }
                 DispatchQueue.main.async{
                     self.HomeTableView.reloadData()
@@ -108,7 +119,15 @@ class HomeViewController: UIViewController,  UITableViewDataSource, UITableViewD
             } catch let errorJson {
                 print(errorJson)
             }
-        }.resume()
+        //            do {
+        //                print(data)
+        //                let event = try JSONDecoder().decode([Events].self, from: data)
+        //                print(event)
+        //            } catch {
+        //                print("error: ", error)
+        //                print(error.localizedDescription)
+        //            }
+                }.resume()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

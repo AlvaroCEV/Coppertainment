@@ -17,6 +17,5 @@ class gameInfo : Codable{
         plataforma = json["plataforma"] as? String ?? ""
         precio = json["precio"] as? String ?? ""
         portada = json["portada"] as? String ?? ""
-
     }
 }
